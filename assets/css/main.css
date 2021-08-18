@@ -900,7 +900,7 @@
 
 /* Main */
 
-	#main, #ccje{
+	#main {
 		-moz-transform-origin: 50% 50%;
 		-webkit-transform-origin: 50% 50%;
 		-ms-transform-origin: 50% 50%;
@@ -924,7 +924,7 @@
 		width: 27em;
 	}
 
-	#ccje{
+	#ccje {
 		-moz-transform-origin: 50% 50%;
 		-webkit-transform-origin: 50% 50%;
 		-ms-transform-origin: 50% 50%;
@@ -953,7 +953,7 @@
 			margin-bottom: 1.5em;
 		}
 
-			#main .avatar img, #ccje .avatar img {
+			#main .avatar img {
 				display: block;
 				margin: 0 auto;
 				border-radius: 100%;
@@ -965,7 +965,7 @@
 				margin: 0 auto;
 			}
 
-			#main .avatar:before, #ccje .avatar:before {
+			#main .avatar:before {
 				content: '';
 				display: block;
 				position: absolute;
@@ -975,6 +975,17 @@
 				height: 1px;
 				z-index: -1;
 				background: #c8cccf;
+			}
+
+			#ccje .avatar:before {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: -3em;
+				width: calc(100% + 6em);
+				height: 1px;
+				z-index: -1;
 			}
 
 		@media screen and (max-width: 480px) {
