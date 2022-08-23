@@ -1,24 +1,180 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
 <head>
-	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="assets/css/main.css" />
+    <title>Alejandro Alvarez Vazquez</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="resume.css" media="screen" />
+    <style type="text/css">
+    body {
+        background-color: #000000;
+        margin: 0;
+        padding: 0;
+        font-family: "Lucida Console", Monaco, monospace;
+        color: #CCC5B9;
+    }
+    </style>    
 </head>
 
-	<body class="body">
-		<div class="title">
-			<h1>Alejandro Alvarez Vazquez</h1>
-			<h2>Devops Support Engineer at CloudBees</h2>
-		</div>
+<body>
+    <div>
+        <div>
+            <hr style="border-color:white; border-width:5px" />
+            <center><strong>Alejandro Alvarez Vazquez</strong></center>
+            <center>Devops Support Engineer at - <a href="https://cloudbees.com" target="_blank">CloudBees</a></center>
+            <hr style="border-color:white; border-width:5px" />
+            </p>
+        </div>
 
-		<div class="menu">
-			<a href="https://www.linkedin.com/in/alejandro-alvarez-vazquez-43a83625">Linkedin</a>
-			<a href="https://www.youtube.com/channel/UC4V5qamxirXdjramIxyTuxA">YouTube</a>
-			<a href="https://twitter.com/jandroav">Twitter</a>
-			<a href="https://www.instagram.com/jandroavtv">Instagram</a>
-			<a href="https://github.com/jandroav">GitHub</a>
-		</div>
-	</body>
+        <div id="resume-container">
+            <div id="executed_commands">
+                <div>Note: Enter <i>help</i> to get list of all available commands</div>
+            </div>
+
+            <div id="command-line">
+                <span>&gt;&gt;</span>
+                <input type="text" autofocus="autofocus" id="command" />
+            </div>
+        </div>
+    </div>
+    
+    <!-- Resume Sections -->
+    
+    <!-- 1. About -->
+    <div id="about">
+        <div><strong>About Me</strong></div>
+        <div>In the past: Software Developer. Today: Development Support Engineer</div>
+    </div>
+    
+    <!-- 2. Education  -->
+    <div id="education">
+        <div><strong>Education</strong></div>
+        <div>
+            <ul>
+                <li><strong>University of Islas Balearse 2015-2016</strong></li>
+                <p style="margin: 0">Lean & Agile Project Management Expert</p>
+                
+                <li><strong>University of Oviedo, 2011-2012</strong></li>
+                <p style="margin: 0">Software Engineering Degree</p>
+                
+                <li><strong>University of Oviedo, 2006-2010</strong></li>
+                <p style="margin: 0">Computer Science Engineering</p>
+
+				<li><strong>Sagrada Familia de Urgel, 2003-2005</strong></li>
+                <p style="margin: 0">Senior Technician in Computer Systems Administration</p>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 3. Projects  -->
+    <div id="projects">
+        <div><strong>Projects</strong></div>
+        <div>
+            <ul>
+                <li><strong><a href="https://github.com/jandroav/performance-debugger" target="_blank">performance-debugger</a></strong> 
+                - A simple way of debugging your k8s app using a lightweight container using Kubernetes debug ephemeral containers.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 4. Experience  -->
+    <div id="experience">
+        <div><strong>Experience</strong></div>
+        <div>
+            <ul>
+                <li><strong>CloudBees — Senior Development Support Engineer</strong></li>
+                <p>Supporting teams to build software that matters</p>
+
+				<li><strong>Avoris — CI/CD System Administrator</strong></li>
+                <p>Helping more than 200 developers in their day-to-day with the CI/CD platform. The rest of the time maintaining and improving the platform</p>
+
+				<li><strong>Idiso — Software Analyst</strong></li>
+                <p>J2EE, SCRUM, Spring+Angular, TOMCAT, Jquery, JBoss, Oracle, MySQL, JUnit, MockitoMVC, Selenium</p>
+
+				<li><strong>Brujula — Senior Java Software Engineer</strong></li>
+                <p>J2EE, Servlets, Struts 1 and 2, Ant, Maven, Hibernate, Oracle, MyBatis, Web Robots, Web Services, JSON, Lucene , Tomcat, JBoss, Denodo Platform, JUnit, BDD (Mockito, PowerMockito, Cucumber), Jenkins, Sonar, PMD, CPD, ChekStyle, FindBugs</p>
+				
+				<li><strong>Capgemini — Java Software Engineer</strong></li>
+                <p>J2EE, Oracle, JPA, JSF, Richfaces, Spring Core, Spring Batch, RSA (IBM), Websphere Server (IBM), WID (IBM)</p>
+
+				<li><strong>University of Oviedo — Robotics Researcher & Developer</strong></li>
+                <p>C ++, NET, Android, JMEDS DPWS (IoT). REST, SOAP, hibernate, servlets, EJB</p>
+
+				<li><strong>Vorago — RoR Software Engineer</strong></li>
+                <p>Ruby on Rails, CSS</p>
+			
+			</ul>
+        </div>
+    </div>
+
+    <!-- 5. Skills  -->
+    <div id="skills">
+        <div><strong>Technical Skills</strong></div>
+        <div>
+            <ul>
+                <li><strong>Languages</strong> - Java, Groovy, Bash</li>
+                <li><strong>Operating Systems</strong> - Linux (RHEL, Debian based), Windows and macOS</li>
+                <li><strong>Tools/Technologies</strong> - AWS, Artifactory, ArgoCD, CloudBees and Jenkins, Docker, GCP, Git, Helm, k8s, Nexus, OpenShift, Sonar</li>
+            </ul>
+        </div>
+
+        <div><strong>Certifications</strong></div>
+        <div>
+            <ul>
+                <li><strong>2022 CKA Certified Kubernetes Administrator</strong></li>
+                <li><strong>2022 AWS Certified Cloud Practitioner/strong</strong></li>    
+				<li><strong>2022 GCP Google Cloud Essentials</strong></li>                    
+				<li><strong>2022 Liquibase Fundamentals Certification</strong></li>                    
+				<li><strong>2022 GitOps Fundamentals</strong></li>
+				<li><strong>2022 JVM PERFORMANCE ENGINEERING AND TROUBLESHOOTING CERTIFICATE</strong></li>                    
+				<li><strong>2021 Certified CloudBees Jenkins Engineer</strong></li>                    
+				<li><strong>2019 Jenkins Engineer</strong></li>                                 
+            </ul>
+        </div>
+    </div>
+
+    <!-- 6. Contact  -->
+    <div id="contact">
+        <p>
+            Email: <a href="mailto:bansal.kartike@gmail.com" target="_blank">jandroave@icloud.com</a><br>
+            Github: <a href="https://github.com/jandroav" target="_blank">https://github.com/jandroav</a><br>
+			Instagram: <a href="https://www.instagram.com/jandroavtv" target="_blank">https://www.instagram.com/jandroavtv</a><br>
+			LinkedIn: <a href="https://www.linkedin.com/in/alejandro-alvarez-vazquez-43a83625" target="_blank">https://www.linkedin.com/in/alejandro-alvarez-vazquez-43a83625</a><br>
+			Twitter: <a href="https://twitter.com/jandroav" target="_blank">https://twitter.com/jandroav</a><br>
+            YouTube: <a href="https://www.youtube.com/channel/UC4V5qamxirXdjramIxyTuxA" target="_blank">https://www.youtube.com/channel/UC4V5qamxirXdjramIxyTuxA</a>
+        </p>
+    </div>
+
+    <!-- 7. Download -->
+    <div id="download">
+        <p>Downloading resume..<br> 
+        Note: If you are facing any problem, then click <strong><a href="./resume.pdf">HERE</a></strong> to download</p>
+    </div>
+
+    <!-- 8. Error -->
+    <div id="error">
+        <p><strong>Error</strong>: Command not found! Enter <i>help</i> to get list of all available commands..</p>
+    </div>
+
+    <!-- 9. clear -->
+    <div id="clear"></div>
+
+    <!-- 10. Help -->
+    <div id="help">
+        <div>
+            ------------------  <br>
+            Built-in Commands   <br>
+            ------------------  <br>
+            <p>about, education, projects, experience, skills, 
+            contact, download, clear</p>
+        </div>
+    </div>
+    <!-- Resume sections end -->
+
+    <script type='text/javascript' src="resume.js"></script>    
+</body>
+
 </html>
