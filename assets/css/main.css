@@ -1053,3 +1053,15 @@
 		body.is-ie #wrapper {
 			height: 100%;
 		}
+
+.certifications {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+	
+.certifications img {
+	width: 60px;
+	height: 60px;
+	margin: 0 10px;
+}
