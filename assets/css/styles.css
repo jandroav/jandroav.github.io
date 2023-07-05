@@ -4,8 +4,8 @@
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
-  --first-color: hsl(29, 80%, 58%);
-  --first-color-light: hsl(29, 80%, 70%);
+  --first-color: hsl(265, 80%, 58%);
+  --first-color-light: hsl(273, 77%, 74%);
   --black-color: hsl(29, 16%, 10%);
   --text-color: hsl(29, 8%, 65%);
   --body-color: hsl(29, 100%, 99%);
