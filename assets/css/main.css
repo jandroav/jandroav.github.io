@@ -1062,7 +1062,7 @@
 }
 
 .certification-item {
-	flex-basis: 33%; /* Adjust this value as needed based on the desired number of columns */
+	flex-basis: 10%; /* Adjust this value as needed based on the desired number of columns */
 	padding: 10px;
 	text-align: center;
 }
@@ -1070,7 +1070,7 @@
 /* Ensure images don't exceed their parent container */
 .certification-item img {
 	max-width: 100%;
-	height: auto;
+	height: 50%;
 }
 
 /* Adjust the layout of the footer content */
