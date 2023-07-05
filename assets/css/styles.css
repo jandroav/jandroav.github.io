@@ -51,7 +51,7 @@ img {
 
 .card {
   position: relative;
-  width: 256px;
+  width: 280px;
   background-color: var(--black-color);
   padding: 1.25rem 2rem 3rem;
   border-radius: 1.5rem;
