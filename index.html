@@ -1,44 +1,62 @@
-<!DOCTYPE HTML>
-<!--
-	Identity by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>jandroav.github.io</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
-		<!-- Wrapper -->
-			<div id="wrapper">
-				<!-- Main -->
-					<section id="main">
-						<header>
-							<span class="avatar"><img src="images/avatar.png" alt="" /></span>
-							<h1>Alejandro Alvarez Vazquez</h1>
-							<p>DevOps Engineer at <a href="https://liquibase.org">Liquibase</a></p>
-						</header>
-						<footer>
-							<ul class="icons">
-								<li><a href="https://www.youtube.com/channel/UC4V5qamxirXdjramIxyTuxA" class="icon brands fa-youtube">YouTube</a></li>
-								<li><a href="https://twitter.com/jandroav" class="icon brands fa-twitter">Twitter</a></li>
-								<li><a href="https://www.instagram.com/jandro4v" class="icon brands fa-instagram">Instagram</a></li>
-                				<li><a href="https://github.com/jandroav" class="icon brands fa-github">GitHub</a></li>
-                				<li><a href="https://www.linkedin.com/in/alejandro-alvarez-vazquez-43a83625" class="icon brands fa-linkedin">Linkedin</a></li>
-							</ul>
-						</footer>
-					</section>
-			</div>
-		<!-- Scripts -->
-			<script>
-				if ('addEventListener' in window) {
-					window.addEventListener('load', function() { document.body.className = document.body.className.replace(/\bis-preload\b/, ''); });
-					document.body.className += (navigator.userAgent.match(/(MSIE|rv:11\.0)/) ? ' is-ie' : '');
-				}
-			</script>
-	</body>
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>jandro</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">
+                <div class="card__border">
+                    <img src="images/avatar.png" alt="card image" class="card__img">
+                </div>
+
+                <h3 class="card__name">Alejandro Alvarez</h3>
+                <span class="card__profession">DevOps Engineer at <a href="https://liquibase.org">Liquibase</a></span>
+
+                <div class="card__social" id="card-social">
+                    <div class="card__social-control">
+                        <!-- Toggle button -->
+                        <div class="card__social-toggle" id="card-toggle">
+                            <i class="ri-add-line"></i>
+                        </div>
+    
+                        <span class="card__social-text">My social networks</span>
+    
+                        <!-- Card social -->
+                        <ul class="card__social-list">
+                            <a href="https://www.linkedin.com/in/alejandro-alvarez-vazquez-43a83625" target="_blank" class="card__social-link">
+                                <i class="ri-linkedin-line"></i>
+                            </a>
+    
+                            <a href="https://www.instagram.com/jandro4v" target="_blank" class="card__social-link">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+    
+                            <a href="https://twitter.com/jandroav" target="_blank" class="card__social-link">
+                                <i class="ri-twitter-line"></i>
+                            </a>
+							<a href="https://www.youtube.com/channel/UC4V5qamxirXdjramIxyTuxA" target="_blank" class="card__social-link">
+                                <i class="ri-youtube-line"></i>
+                            </a>
+							<a href="https://github.com/jandroav" target="_blank" class="card__social-link">
+                                <i class="ri-github-line"></i>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
 </html>
