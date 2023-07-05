@@ -1059,14 +1059,11 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	list-style: none;
 }
 	
 .certifications img {
 	width: 100px;
 	height: 100px;
 	margin: 0 5px;
-}
-
-.certifications ul {
-	list-style: none;
 }
