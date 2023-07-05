@@ -1054,15 +1054,27 @@
 			height: 100%;
 		}
 
+/* Adjust the layout of certification items */
 .certifications {
-	padding: 1.5em 0 0 0;
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
 }
-	
-.certifications img {
-	width: 100px;
-	height: 100px;
-	margin: 0 10px;
+
+.certification-item {
+	flex-basis: 33%; /* Adjust this value as needed based on the desired number of columns */
+	padding: 10px;
+	text-align: center;
+}
+
+/* Ensure images don't exceed their parent container */
+.certification-item img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Adjust the layout of the footer content */
+#footer {
+	padding: 30px 0;
+	text-align: center;
 }
