@@ -8,7 +8,7 @@
   --first-color-light: hsl(273, 77%, 74%);
   --black-color: hsl(29, 16%, 10%);
   --text-color: hsl(29, 8%, 65%);
-  --body-color: hsl(29, 100%, 99%);
+  --body-color: hsl(30, 6%, 7%);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
@@ -87,7 +87,7 @@ img {
   padding: 0.75rem;
   border-radius: 3rem;
   text-align: initial;
-  box-shadow: 0 8px 24px hsla(29, 75%, 56%, 0.3);
+  box-shadow: 0 8px 24px hsla(279, 75%, 56%, 0.3);
   position: absolute;
   left: 0;
   right: 0;
