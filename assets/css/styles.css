@@ -8,7 +8,7 @@
   --first-color-light: hsl(273, 77%, 74%);
   --black-color: hsl(29, 16%, 10%);
   --text-color: hsl(29, 8%, 65%);
-  --body-color: hsl(30, 6%, 7%);
+  --body-color: hsl(20, 2%, 24%);
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
