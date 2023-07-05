@@ -922,6 +922,7 @@
 		position: relative;
 		text-align: center;
 		width: 32em;
+		margin-top: 16em;
 	}
 
 		#main .avatar {
