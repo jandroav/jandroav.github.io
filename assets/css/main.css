@@ -1054,3 +1054,15 @@
 			height: 100%;
 		}
 
+.certifications {
+	padding: 1.5em 0 0 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+	
+.certifications img {
+	width: 100px;
+	height: 100px;
+	margin: 0 10px;
+}
