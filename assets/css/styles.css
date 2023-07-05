@@ -96,13 +96,28 @@ img {
   overflow: hidden;
   transform-origin: 18px 17px;
 }
-.card__social-control {
+.card__cert {
+  width: 280px;
+  background-color: var(--first-color);
+  padding: 0.75rem;
+  border-radius: 3rem;
+  text-align: initial;
+  box-shadow: 0 8px 24px hsla(279, 75%, 56%, 0.3);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -5.75rem;
+  margin: 0 auto;
+  overflow: hidden;
+  transform-origin: 18px 17px;
+}
+.card__social-control, .card__cert-control {
   position: relative;
   transform-origin: 18px 18px;
   transition: transform 0.45s ease;
   transform: rotate(0);
 }
-.card__social-toggle {
+.card__social-toggle, .card__cert-toggle {
   display: inline-flex;
   background-color: var(--black-color);
   color: var(--first-color);
@@ -113,19 +128,19 @@ img {
   position: relative;
   z-index: 10;
 }
-.card__social-text {
+.card__social-text, .card__cert-text {
   display: block;
   color: var(--black-color);
   font-size: var(--smaller-font-size);
   font-weight: 500;
 }
-.card__social-list {
+.card__social-list, .card__cert-list {
   display: inline-flex;
   column-gap: 0.75rem;
   transform: rotate(135deg);
   transform-origin: 18px 17px;
 }
-.card__social-link {
+.card__social-link, .card__cert-link {
   display: inline-flex;
   background-color: var(--first-color-light);
   color: var(--black-color);
@@ -133,24 +148,24 @@ img {
   padding: 6px;
   border-radius: 50%;
 }
-.card__social-text, .card__social-list {
+.card__social-text, .card__social-list, .card__cert-text, .card__cert-list {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   padding-left: 3.1rem;
 }
-.card__social-text {
+.card__social-text, .card__cert-text  {
   top: 0.5rem;
 }
 
 /* Rotate social */
-.animation .card__social-control {
+.animation .card__social-control, .animation .card__cert-control {
   transform: rotate(-135deg);
 }
 
 /* Up animation */
-.card__social.animation {
+.card__social.animation, .card__cert.animation {
   animation: up-animation 1s ease-in-out forwards;
 }
 
@@ -166,7 +181,7 @@ img {
   }
 }
 /* Down animation */
-.card__social.down-animation {
+.card__social.down-animation, .card__cert.down-animation {
   animation: down-animation 1s ease-in-out forwards;
 }
 
