@@ -1062,15 +1062,15 @@
 }
 
 .certification-item {
-	flex-basis: 10%; /* Adjust this value as needed based on the desired number of columns */
-	padding: 10px;
+	flex-basis: 5%; /* Adjust this value as needed based on the desired number of columns */
+	padding: 5px;
 	text-align: center;
 }
 
 /* Ensure images don't exceed their parent container */
 .certification-item img {
 	max-width: 100%;
-	height: 50%;
+	height: auto;
 }
 
 /* Adjust the layout of the footer content */
