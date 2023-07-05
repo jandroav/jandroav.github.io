@@ -1078,3 +1078,9 @@
 	padding: 30px 0;
 	text-align: center;
 }
+
+.certifications img {
+	width: 100px;
+	height: 100px;
+	margin: 0 10px;
+}
