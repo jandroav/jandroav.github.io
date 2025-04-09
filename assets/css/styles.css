@@ -168,15 +168,21 @@ img {
   top: 0.5rem;
 }
 
-/* Rotate social */
-.animation .card__connect-control,
-.animation .card__cert-control {
+/* Rotate connect control when animation class is added */
+#card-connect.animation .card__connect-control {
+  transform: rotate(-135deg);
+}
+
+#card-cert.animation .card__cert-control {
   transform: rotate(-135deg);
 }
 
 /* Up animation */
-.card__connect.animation,
-.card__cert.animation {
+#card-connect.animation {
+  animation: up-animation 1s ease-in-out forwards;
+}
+
+#card-cert.animation {
   animation: up-animation 1s ease-in-out forwards;
 }
 
@@ -193,9 +199,13 @@ img {
     transform: rotate(1deg);
   }
 }
+
 /* Down animation */
-.card__connect.down-animation,
-.card__cert.down-animation {
+#card-connect.down-animation {
+  animation: down-animation 1s ease-in-out forwards;
+}
+
+#card-cert.down-animation {
   animation: down-animation 1s ease-in-out forwards;
 }
 
