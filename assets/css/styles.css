@@ -1,19 +1,61 @@
 /*=============== GOOGLE FONTS ===============*/
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 /*=============== VARIABLES CSS ===============*/
 :root {
   /*========== Colors ==========*/
   /*Color mode HSL(hue, saturation, lightness)*/
   --first-color: hsl(265, 80%, 58%);
   --first-color-light: hsl(273, 77%, 74%);
+  --first-color-alt: hsl(262, 70%, 50%);
   --black-color: hsl(29, 16%, 10%);
   --text-color: hsl(29, 8%, 65%);
+  --text-color-light: hsl(29, 8%, 85%);
   --body-color: hsl(20, 2%, 24%);
+  --container-color: hsla(20, 10%, 12%, 0.8);
+  --card-shadow: 0 8px 24px hsla(279, 75%, 56%, 0.2);
+  --link-hover-color: hsl(273, 77%, 85%);
+
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
-  --h3-font-size: 1.125rem;
+  --h1-font-size: 1.75rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
   --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 968px) {
+  :root {
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.75rem;
+    --h3-font-size: 1.5rem;
+    --normal-font-size: 1.125rem;
+    --small-font-size: 0.9375rem;
+    --smaller-font-size: 0.8125rem;
+  }
+}
+
+/* Color theme preferences */
+@media (prefers-color-scheme: light) {
+  :root {
+    --body-color: hsl(29, 100%, 95%);
+    --container-color: hsla(0, 0%, 100%, 0.9);
+    --black-color: hsl(29, 16%, 10%);
+    --text-color: hsl(29, 8%, 30%);
+    --text-color-light: hsl(29, 8%, 40%);
+    --card-shadow: 0 8px 24px hsla(279, 75%, 56%, 0.15);
+  }
 }
 
 /*=============== BASE ===============*/
@@ -25,11 +67,48 @@
 
 body {
   font-family: var(--body-font);
-  background-color: var(--body-color);
+  font-size: var(--normal-font-size);
+  background: linear-gradient(
+    135deg,
+    var(--body-color) 0%,
+    hsla(265, 50%, 15%, 1) 100%
+  );
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: var(--text-color);
+  transition: background-color 0.4s ease;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--first-color);
+  font-weight: var(--font-semi-bold);
 }
 
 a {
   text-decoration: none;
+  color: var(--first-color);
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--link-hover-color);
 }
 
 ul {
@@ -52,16 +131,45 @@ img {
 .card {
   position: relative;
   width: 280px;
-  background-color: var(--black-color);
-  padding: 1.25rem 2rem 3rem;
+  background-color: var(--container-color);
+  padding: 1.5rem 2rem 3rem;
   border-radius: 1.5rem;
   text-align: center;
-  box-shadow: 0 4px 16px hsla(29, 75%, 8%, 0.2);
+  box-shadow: var(--card-shadow);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.card:hover {
+  animation: float 6s ease-in-out infinite;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px hsla(279, 75%, 56%, 0.3);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
 .card__img {
   width: 96px;
   border-radius: 50%;
+  transition: transform 0.3s;
 }
+
+.card__img:hover {
+  transform: scale(1.05);
+}
+
 .card__border {
   width: 110px;
   height: 110px;
@@ -70,17 +178,31 @@ img {
   display: grid;
   place-items: center;
   margin: 0 auto 0.75rem;
+  transition: border-color 0.3s;
 }
+
+.card__border:hover {
+  border-color: var(--first-color-alt);
+}
+
 .card__name {
   color: var(--first-color);
   font-size: var(--h3-font-size);
-  font-weight: 500;
+  font-weight: var(--font-medium);
+  margin-bottom: 0.35rem;
 }
+
 .card__profession {
   color: var(--text-color);
-  font-size: var(--smaller-font-size);
-  font-weight: 500;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: 1rem;
 }
+
+.card__profession a {
+  font-weight: var(--font-semi-bold);
+}
+
 .card__connect {
   width: 280px;
   background-color: var(--first-color);
@@ -96,6 +218,7 @@ img {
   overflow: hidden;
   transform-origin: 18px 17px;
 }
+
 .card__cert {
   width: 280px;
   background-color: var(--first-color);
@@ -111,6 +234,7 @@ img {
   overflow: hidden;
   transform-origin: 18px 17px;
 }
+
 .card__connect-control,
 .card__cert-control {
   position: relative;
@@ -118,6 +242,8 @@ img {
   transition: transform 0.45s ease;
   transform: rotate(0);
 }
+
+/* New toggle styles */
 .card__connect-toggle,
 .card__cert-toggle {
   display: inline-flex;
@@ -129,14 +255,42 @@ img {
   cursor: pointer;
   position: relative;
   z-index: 10;
+  transition: all 0.4s cubic-bezier(0.68, -0.6, 0.32, 1.6);
 }
+
+/* Add transition class for smoother animation */
+.toggle-transition {
+  transition: transform 0.4s ease, background-color 0.3s ease;
+}
+
+/* New active toggle state */
+.toggle-active {
+  transform: rotate(90deg);
+  background-color: var(--first-color-alt);
+  color: var(--container-color);
+}
+
+.card__connect-toggle:hover,
+.card__cert-toggle:hover {
+  background-color: var(--first-color);
+  color: var(--container-color);
+  transform: scale(1.1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Add a special effect for active toggle on hover */
+.toggle-active:hover {
+  transform: rotate(90deg) scale(1.1);
+}
+
 .card__connect-text,
 .card__cert-text {
   display: block;
   color: var(--black-color);
   font-size: var(--smaller-font-size);
-  font-weight: 500;
+  font-weight: var(--font-medium);
 }
+
 .card__connect-list,
 .card__cert-list {
   display: inline-flex;
@@ -144,6 +298,7 @@ img {
   transform: rotate(135deg);
   transform-origin: 18px 17px;
 }
+
 .card__connect-link,
 .card__cert-link {
   display: inline-flex;
@@ -152,7 +307,15 @@ img {
   font-size: 1.25rem;
   padding: 6px;
   border-radius: 50%;
+  transition: transform 0.3s, background-color 0.3s;
 }
+
+.card__connect-link:hover,
+.card__cert-link:hover {
+  transform: scale(1.1);
+  background-color: var(--link-hover-color);
+}
+
 .card__connect-text,
 .card__connect-list,
 .card__cert-text,
@@ -163,6 +326,7 @@ img {
   right: 0;
   padding-left: 3.1rem;
 }
+
 .card__connect-text,
 .card__cert-text {
   top: 0.5rem;
@@ -177,13 +341,13 @@ img {
   transform: rotate(-135deg);
 }
 
-/* Up animation */
+/* Up animation - Modified for smoother effect */
 #card-connect.animation {
-  animation: up-animation 1s ease-in-out forwards;
+  animation: up-animation 0.8s ease-in-out forwards;
 }
 
 #card-cert.animation {
-  animation: up-animation 1s ease-in-out forwards;
+  animation: up-animation 0.8s ease-in-out forwards;
 }
 
 @keyframes up-animation {
@@ -200,13 +364,13 @@ img {
   }
 }
 
-/* Down animation */
+/* Down animation - Modified for smoother effect */
 #card-connect.down-animation {
-  animation: down-animation 1s ease-in-out forwards;
+  animation: down-animation 0.8s ease-in-out forwards;
 }
 
 #card-cert.down-animation {
-  animation: down-animation 1s ease-in-out forwards;
+  animation: down-animation 0.8s ease-in-out forwards;
 }
 
 @keyframes down-animation {
@@ -220,5 +384,77 @@ img {
   }
   88% {
     transform: rotate(-1deg);
+  }
+}
+
+/* =============== THEME BUTTON =============== */
+.theme-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: inline-flex;
+  font-size: 1.25rem;
+  padding: 0.5rem;
+  color: var(--first-color);
+  background-color: var(--container-color);
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 8px hsla(279, 75%, 56%, 0.2);
+  z-index: var(--z-tooltip);
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.theme-button:hover {
+  transform: translateY(-3px);
+}
+
+/* Class that adds color scheme to the body */
+body.dark-theme {
+  --body-color: hsl(20, 2%, 24%);
+  --container-color: hsla(20, 10%, 12%, 0.8);
+  --black-color: hsl(29, 16%, 10%);
+  --text-color: hsl(29, 8%, 65%);
+  --text-color-light: hsl(29, 8%, 85%);
+  --card-shadow: 0 8px 24px hsla(279, 75%, 56%, 0.2);
+}
+
+body.light-theme {
+  --body-color: hsl(29, 100%, 95%);
+  --container-color: hsla(0, 0%, 100%, 0.9);
+  --black-color: hsl(29, 16%, 10%);
+  --text-color: hsl(29, 8%, 30%);
+  --text-color-light: hsl(29, 8%, 40%);
+  --card-shadow: 0 8px 24px hsla(279, 75%, 56%, 0.15);
+}
+
+/* =============== RESPONSIVE DESIGN =============== */
+@media screen and (min-width: 576px) {
+  .container {
+    margin-inline: 3rem;
+  }
+
+  .card {
+    width: 320px;
+    padding: 2rem 2.5rem 3.5rem;
+  }
+
+  .card__connect,
+  .card__cert {
+    width: 320px;
+  }
+
+  .card__img {
+    width: 110px;
+  }
+
+  .card__border {
+    width: 124px;
+    height: 124px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin-inline: 4rem;
   }
 }
