@@ -13,7 +13,7 @@
   /*.5rem = 8px | 1rem = 16px ...*/
   --body-font: "Poppins", sans-serif;
   --h3-font-size: 1.125rem;
-  --smaller-font-size: .75rem;
+  --smaller-font-size: 0.75rem;
 }
 
 /*=============== BASE ===============*/
@@ -81,7 +81,7 @@ img {
   font-size: var(--smaller-font-size);
   font-weight: 500;
 }
-.card__social {
+.card__connect {
   width: 280px;
   background-color: var(--first-color);
   padding: 0.75rem;
@@ -111,13 +111,15 @@ img {
   overflow: hidden;
   transform-origin: 18px 17px;
 }
-.card__social-control, .card__cert-control {
+.card__connect-control,
+.card__cert-control {
   position: relative;
   transform-origin: 18px 18px;
   transition: transform 0.45s ease;
   transform: rotate(0);
 }
-.card__social-toggle, .card__cert-toggle {
+.card__connect-toggle,
+.card__cert-toggle {
   display: inline-flex;
   background-color: var(--black-color);
   color: var(--first-color);
@@ -128,19 +130,22 @@ img {
   position: relative;
   z-index: 10;
 }
-.card__social-text, .card__cert-text {
+.card__connect-text,
+.card__cert-text {
   display: block;
   color: var(--black-color);
   font-size: var(--smaller-font-size);
   font-weight: 500;
 }
-.card__social-list, .card__cert-list {
+.card__connect-list,
+.card__cert-list {
   display: inline-flex;
   column-gap: 0.75rem;
   transform: rotate(135deg);
   transform-origin: 18px 17px;
 }
-.card__social-link, .card__cert-link {
+.card__connect-link,
+.card__cert-link {
   display: inline-flex;
   background-color: var(--first-color-light);
   color: var(--black-color);
@@ -148,32 +153,40 @@ img {
   padding: 6px;
   border-radius: 50%;
 }
-.card__social-text, .card__social-list, .card__cert-text, .card__cert-list {
+.card__connect-text,
+.card__connect-list,
+.card__cert-text,
+.card__cert-list {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   padding-left: 3.1rem;
 }
-.card__social-text, .card__cert-text  {
+.card__connect-text,
+.card__cert-text {
   top: 0.5rem;
 }
 
 /* Rotate social */
-.animation .card__social-control, .animation .card__cert-control {
+.animation .card__connect-control,
+.animation .card__cert-control {
   transform: rotate(-135deg);
 }
 
 /* Up animation */
-.card__social.animation, .card__cert.animation {
+.card__connect.animation,
+.card__cert.animation {
   animation: up-animation 1s ease-in-out forwards;
 }
 
 @keyframes up-animation {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0);
   }
-  50%, 60% {
+  50%,
+  60% {
     transform: rotate(-3deg);
   }
   88% {
@@ -181,15 +194,18 @@ img {
   }
 }
 /* Down animation */
-.card__social.down-animation, .card__cert.down-animation {
+.card__connect.down-animation,
+.card__cert.down-animation {
   animation: down-animation 1s ease-in-out forwards;
 }
 
 @keyframes down-animation {
-  0%, 100% {
+  0%,
+  100% {
     transform: rotate(0);
   }
-  50%, 60% {
+  50%,
+  60% {
     transform: rotate(6deg);
   }
   88% {
